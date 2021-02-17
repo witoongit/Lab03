@@ -1,3 +1,9 @@
+const clicked = document.querySelectorAll("[id=no]")
+for (let index = 0; index < clicked.length; index++) {
+     clicked[index].addEventListener('click', TableClick);
+}
+
+
 let iswin = false;
 let isplayable = 4;
 function TableClick() {
@@ -65,6 +71,7 @@ function checkwin() {
             win(o);
         } 
     }
+    
     if(clicked[0].id === 'x'){
         if(clicked[1].id === 'x' && clicked[2].id === 'x'){
             win(x);
@@ -126,7 +133,3 @@ function win(player){
  }
    
 
-const clicked = document.querySelectorAll("[id=no]")
-for (let index = 0; index < clicked.length; index++) {
-     clicked[index].addEventListener('click', TableClick);
-}
